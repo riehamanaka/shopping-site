@@ -55,6 +55,7 @@ header{
                 margin: 0;
                 padding: 0;
                 display: none;
+                z-index: 2;
             
                 li{
                     list-style: none;
@@ -358,6 +359,7 @@ header{
 
 #shohin-name{
     background: white;
+    margin-top: 5px;
     padding-top: 20px;
     padding-bottom: 13px;
     line-height: 14px;
@@ -399,13 +401,13 @@ header{
 
   #link{
     background: $base-gray;
-    margin-top:15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 9px 70px 7px 30px;
     background-color:$footer-gray;
     background-image: url("../images/list/home_icon.png");
     background-repeat:no-repeat;
     background-position: 4% center;
+    z-index: 1;
     
       p{
           font-size: 11px;
@@ -415,8 +417,6 @@ header{
        
        @media (min-width: 550px){
            background-position: 2% center;
-           margin-bottom: 10px;
-           margin-top: 0;
        }
   } 
 
@@ -643,6 +643,7 @@ header{
   
   #cover_list_sp,#cover_list_pc{
       margin-bottom: 10px;
+      
   }
   
   #back_next{
