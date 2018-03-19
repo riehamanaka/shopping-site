@@ -90,19 +90,21 @@ header{
     
     
         #header_in{
-            padding: 40px 0 35px 0;
+            padding: 40px 0 40px 0;
         }
         
         .pc_logo{
             float: left;
-            padding-left:20px;
             img{
                 width:140px;
             }
         }
+        .pc_navi{
+            position: relative;
+            top: 22px;
+        }
         
         .pc_navi_li{
-            margin-top: 20px;
             margin-bottom: 0;
             padding: 0;
             display: flex;
@@ -110,26 +112,15 @@ header{
             
             li{
                 list-style: none;
-                margin: 5px 0 0 0 ;
-                padding: 0;
-                
-                
-                a{
-                    color: $dark-gray;
-                    text-decoration: none;
-                    font-weight: bold;
-                    @include fontsize(12);
-                    
-                    padding-left: 9px;
-                }
-                //a
-                
-                a:hove{
-                    color: $red;
-                }
-                //a:hover
+                padding-left: 20px;
+                margin-bottom: 0;
             }
             //.li
+            li.fa_insta{
+                list-style: none;
+                padding-left: 9px;
+            }
+            
         }
         //.pc_navi_li
     
@@ -198,11 +189,13 @@ header{
       
       
       .item{
-        width: 43%;
+        width: 49%;
         padding: 9px; 
         background: white;
-        margin-right: 2px;
-        margin-bottom: 2px;
+        box-sizing: border-box;
+        margin-right: 0.5%;
+        margin-bottom: 0.5%;
+        
         
         p{
           font-size: 11px;
@@ -220,9 +213,10 @@ header{
         }
         .flex_item{
             .item{
-            width: 30%;
+            width: 32%;
             padding: 10px 10px 24px 10px;
-            
+
+
            
             
               p{
@@ -260,7 +254,8 @@ header{
         margin-bottom: 5px;
         background: white;
         padding: 20px 20px 16px 20px;
-        
+        box-sizing: border-box;
+        margin-right: 0.5%;
        
     p.hutoji{
             font-weight:bold;
@@ -280,6 +275,7 @@ header{
         img{
             padding-top:16px;
             padding-bottom:14px;
+            display: -webkit-box;
         }
     }
     
@@ -320,11 +316,10 @@ header{
     #shopping_guide{
         .flex_box2{
             display:flex;
-            flex-wrap:wrap;
+
             
             .guide_box1, .guide_box2{
-                margin: 0 4px 0 0;
-                width: 43%;
+                width: 50%;
                 
                 p{
                     margin-bottom: 20px;
@@ -429,7 +424,7 @@ header{
     background: white;
     
     @media (min-width: 550px){
-        width: 70%;
+        width: 71%;
         padding-top: 20px;
         padding-bottom: 20px;
     }
@@ -440,34 +435,51 @@ header{
 #list_img{
     
     margin-bottom:0;
-    padding-bottom: 72px;
+    padding-bottom: 10px;
     border-bottom: 1px solid $footer-gray ;
     background: white;
     
     @media (min-width: 550px){
         padding-top: 20px;
         padding-left: 10px;
-        width: 30%;
+        width: 29%;
         padding-bottom: 20px;
         border-bottom: none;
     }
 
   li {
     list-style: none;
-     display: inline-block;
-     margin-bottom: 0;
+    display: inline-block;
+    margin-bottom: 0;
+    width: 18%;
+     
+     
+      @media(min-width: 550px){
+         width: 45%;
+      }
   
     img {
-      width: 60px;
       cursor: pointer;
-      
-      @media(min-width: 550px){
-          width: 75px;
-      }
+      max-width: 100%;
      }
      //img
+     
+    
     }
     //li
+    
+    li.gray{
+        list-style: none;
+        display: inline-block;
+        margin-bottom: 0;
+        width: 18%;
+     
+          @media(min-width: 550px){
+           width: 45%;
+          }
+    }
+    
+  
   }
   //ul
   
@@ -530,8 +542,9 @@ header{
         }
       
         span{
-          color:red;
+          color:#e80f66;
           font-size: 22px;
+          font-style: italic;
         }
   }
   //#price
@@ -546,7 +559,7 @@ header{
       input[type="text"]{
           display: inline-block;
           border-radius: 0;
-          width: 138px;
+          width: 45%;
           height:35px;
           margin-bottom: 0;
           margin-left: 15px;
@@ -921,54 +934,62 @@ header{
 }
 //#shop_info
 
-#pagetop{
-    border-bottom: 1px solid ;
-
-    
-    p{
-     font-weight: bold;  
-     font-size:14.5px;
-     text-align: center;
-   
-    }
-  
-}
-
 }
 //#side
 
 
 
 footer{
-    #pagetop{
-        margin-top: 5px;
-        border-bottom: 1px solid ;
-        
-         
-             @media (min-width:550px){
-                 p{
-                 text-align: right;
-                 margin-bottom: 20px;
-                 padding-top: 40px;
-                 }
-             }
-    }    
     
-   
+    #pagetop{
+       margin-top: 24px;
+      
+         img{
+            display: block;
+            width: 80px;
+            
+            @media(max-width:550px){
+            margin:auto;
+            margin-bottom: 30px;
+            }
+            
+        }
+        //img
+        
+         border-bottom: 1px solid;
+    }
+    //#pagetop
+             
     p{
-       
         font-size:11px;
         text-align:center;
         margin-top: 20px;
         margin-bottom: 20px;
     }
     p.copy{
-        padding-top:-5px;
+        margin-top:-5px;
         font-size:10px;
         text-align:center;
         color:$footer-gray;
-        margin-bottom: 0;
+        margin-bottom: 93px;
     }
+    
+     @media(min-width: 550px){
+         
+        #pagetop{
+            margin-top: 60px;
+            
+            img{
+                margin-left: auto;
+                margin-bottom: 20px;
+            }
+         }    
+            p.copy{
+                margin-top: 30px;
+                margin-bottom: 150px;
+            }
+        }
+        //media(min-width: 550px)
 }
 //#footer
 
